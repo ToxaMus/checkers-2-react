@@ -1,0 +1,30 @@
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    width: calc(90px*8);   
+    height: calc(90px*8);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ceil {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackCeil {
+    background-color: lightslategray;
+}
+
+.whiteCeil {
+    background-color: azure;
+}
