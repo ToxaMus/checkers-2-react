@@ -1,8 +1,8 @@
 import { Board } from "./board"
 import { Colors } from "./colors"
-import { Figure } from "./Figure."
+import { Figure } from "./Figure"
 
-export class Ceil {
+export class Cell {
     readonly x: number
     readonly y: number
     readonly color: Colors

@@ -15,7 +15,10 @@ function App() {
 
   return (
     <div id="app">
-      <BoardComp/>
+      <BoardComp
+        board={board} 
+        setBoard={setBoard}
+      />
     </div>
   )
 }
