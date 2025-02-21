@@ -1,24 +1,25 @@
-import { FC } from "react"
-import { Board } from "../models/board"
-import CeilComp from "./ceilComp"
+import React, { FC } from "react";
+import { Board } from "../ts/board";
+import CellComp from "./CellComp"
 
-interface boardProps {
-    board: Board
+interface BoardProps {
+    board: Board,
     setBoard: (board: Board) => void
 }
 
-const BoardComp: FC<boardProps> = () => {
-    return (
 
-        <div id="board"
-        {board.ceils.map((row, ind) =>
-        <React.Fragment key={ind}>
-           {row.map(cell => 
-                <CeilComp/>
-           )}
-           </React.Fragment>
-           )}
-        />
+const BoardComp: FC<BoardProps> = ({ board }) => {
+   return (
+        <div id="board">
+            {board.cells.map((row, ind) =>
+                <React.Fragment key={ind}>
+                    {row.map(cell =>
+                        < CellComp cell={cell} key={`${cell.x} ${cell.y}`} />
+                    )}
+                </React.Fragment>
+            )}
+        </div>
+
     )
 }
 

@@ -13,7 +13,7 @@
     flex-wrap: wrap;
 }
 
-.ceil {
+.cell {
     width: 90px;
     height: 90px;
     display: flex;
@@ -21,10 +21,10 @@
     align-items: center;
 }
 
-.blackCeil {
-    background-color: lightslategray;
+.blackCell {
+    background-color: darkgrey;
 }
 
-.whiteCeil {
-    background-color: azure;
+.whiteCell {
+    background-color: linen;
 }

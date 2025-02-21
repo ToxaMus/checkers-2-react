@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react"
-import BoardComp from "./components/boardComp"  
-import { Board } from "./models/board"
+import BoardComp from "./components/BoardComp" 
+import { Board } from "./ts/board"
 
 function App() {
-  const [board, setBoard] = useState(new Board)
+   const [board, setBoard] = useState(new Board())
 
-  useEffect(() => restart())
+   useEffect(() => restart, [])
+   
+    function restart() {
+      const newBoard = new Board()
+      newBoard.newAddCells()
+      setBoard(newBoard)
+    }
 
-  function restart() {
-    const newBoard = new Board()
-    newBoard.initCeils()
-    setBoard(newBoard)   
-  }
 
   return (
     <div id="app">
       <BoardComp
-        board={board} 
+        board={board}
         setBoard={setBoard}
       />
     </div>
